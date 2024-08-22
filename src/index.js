@@ -12,8 +12,16 @@ const createCountryCard = (countries) => {
   const cardsWrapper = document.getElementById("cards");
   countries.forEach((country) => {
     const card = document.createElement("div");
-    card.className = "rounded-xl p-5 bg-gray-800 text-white cursor-pointer shadow-xl";
+    card.className =
+      "rounded-xl bg-gray-800 text-white cursor-pointer shadow-xl";
+    const imageContainer = document.createElement("div");
+    const countryFlag = document.createElement("img");
+    countryFlag.src = country.flags.png;
+    countryFlag.alt = `${country.name.common} flag`;
+    countryFlag.className = "w-full h-32 object-cover rounded-t-xl";
+    imageContainer.appendChild(countryFlag);
+    card.appendChild(imageContainer);
+
     cardsWrapper.appendChild(card);
   });
-
 };
