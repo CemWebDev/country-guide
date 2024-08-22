@@ -2,13 +2,24 @@ const API = () => {
   const API_URL = "https://restcountries.com/v3.1/all ";
 
   fetch(API_URL)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status ${response.status}`);
+      }
+      return response.json();
+    })
     .then((data) => {
       createCountryCard(data);
     })
-    .catch((error) => console.error("Error fetching data", error));
+    .catch((error) => {
+      console.error("Error fetching data", error);
+    });
 
   const createCountryCard = (countries) => {
+    if (countries.length === 0) {
+      return;
+    }
+
     console.log(countries);
     const cardsWrapper = document.getElementById("cards");
     countries.forEach((country) => {
@@ -45,6 +56,12 @@ const API = () => {
       cardsWrapper.appendChild(card);
     });
   };
+};
+
+const handleFetchError = (error) => {
+  console.error("An error occurred while fetching data", error);
+  const errorMessage = document.createElement("div");
+  errorMessage.className = ""
 };
 
 export default API;
