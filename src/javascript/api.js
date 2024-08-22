@@ -26,14 +26,12 @@ const createCountryCard = (countries) => {
   countries.forEach((country) => {
     const card = document.createElement("div");
     card.className =
-      "rounded-xl bg-gray-800 text-white cursor-pointer shadow-xl country-card";
+      "rounded-xl bg-gray-800 text-white cursor-pointer country-card";
     const imageContainer = document.createElement("div");
-    imageContainer.className = "overflow-hidden";
     const countryFlag = document.createElement("img");
     countryFlag.src = country.flags.png;
     countryFlag.alt = `${country.name.common} flag`;
-    countryFlag.className =
-      "w-full h-64 object-cover rounded-t-xl hover:scale-100";
+    countryFlag.className = "w-full h-64 object-cover rounded-t-xl";
     imageContainer.appendChild(countryFlag);
 
     const countryContent = document.createElement("div");
