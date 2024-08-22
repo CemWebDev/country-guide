@@ -1,6 +1,6 @@
-import API from "./api.js";
-import Search from "./search.js";
-import PreventDefaultForm from "./preventDefaultForm.js";
+import API from "./components/api.js";
+import Search from "./components/search.js";
+import PreventDefaultForm from "./components/preventDefaultForm.js";
 
 API();
 Search();
