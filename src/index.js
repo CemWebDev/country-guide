@@ -21,6 +21,14 @@ const createCountryCard = (countries) => {
     countryFlag.className = "w-full h-32 object-cover rounded-t-xl";
     imageContainer.appendChild(countryFlag);
     card.appendChild(imageContainer);
+    //! Country details
+
+    const countryContent = document.createElement("div");
+    countryContent.className = "mt-4 flex flex-col items-center gap-6";
+    const countryName = document.createElement("h1");
+    countryName.className = "text-xl";
+    countryName.textContent = country.name.common;
+    const countryDetails = document.createElement("div");
 
     cardsWrapper.appendChild(card);
   });
