@@ -1,5 +1,5 @@
 const API = () => {
-  const API_URL = "https://restcountries.com/v3.1/all ";
+  const API_URL = "https://restcountries.com/v3.1all ";
 
   fetch(API_URL)
     .then((response) => {
@@ -12,7 +12,7 @@ const API = () => {
       createCountryCard(data);
     })
     .catch((error) => {
-      console.error("Error fetching data", error);
+      handleFetchError(error);
     });
 
   const createCountryCard = (countries) => {
@@ -61,7 +61,23 @@ const API = () => {
 const handleFetchError = (error) => {
   console.error("An error occurred while fetching data", error);
   const errorMessage = document.createElement("div");
-  errorMessage.className = ""
+  errorMessage.className =
+    "fixed right-0 bottom-10 bg-red-700 text-white p-4 rounded shadow-lg transform translate-x-full transition-transform duration-500";
+  errorMessage.textContent = "Error loading countries. Please try again later.";
+
+  document.body.appendChild(errorMessage);
+
+  setTimeout(() => {
+    errorMessage.classList.remove("translate-x-full");
+    errorMessage.classList.add("translate-x-0");
+  }, 100);
+  setTimeout(() => {
+    errorMessage.classList.remove("translate-x-0");
+    errorMessage.classList.add("translate-x-full");
+    setTimeout(() => {
+      errorMessage.remove();
+    }, 500);
+  }, 2000);
 };
 
 export default API;
