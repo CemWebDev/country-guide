@@ -20,7 +20,7 @@ const createCountryCard = (countries) => {
     countryFlag.alt = `${country.name.common} flag`;
     countryFlag.className = "w-full h-32 object-cover rounded-t-xl";
     imageContainer.appendChild(countryFlag);
-    card.appendChild(imageContainer);
+
     //! Country details
 
     const countryContent = document.createElement("div");
@@ -29,7 +29,15 @@ const createCountryCard = (countries) => {
     countryName.className = "text-xl";
     countryName.textContent = country.name.common;
     const countryDetails = document.createElement("div");
+    countryDetails.innerHTML = `
+    <span>Population: ${country.population}</span>
+    <p>Capital: ${country.capital}</p>
+    `;
+    countryContent.appendChild(countryName);
+    countryContent.appendChild(countryDetails);
 
+    card.appendChild(imageContainer);
+    card.appendChild(countryContent);
     cardsWrapper.appendChild(card);
   });
 };
