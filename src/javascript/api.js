@@ -14,7 +14,7 @@ const API = () => {
     countries.forEach((country) => {
       const card = document.createElement("div");
       card.className =
-        "rounded-xl bg-gray-800 text-white cursor-pointer shadow-xl";
+        "rounded-xl bg-gray-800 text-white cursor-pointer shadow-xl country-card";
       const imageContainer = document.createElement("div");
       imageContainer.className = "overflow-hidden";
       const countryFlag = document.createElement("img");
