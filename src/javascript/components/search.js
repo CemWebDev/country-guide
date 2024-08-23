@@ -1,4 +1,5 @@
 let cardCount = 250;
+let errorMessage;
 
 const Search = () => {
   const countryInput = document.getElementById("country-input");
@@ -23,6 +24,10 @@ const filter = (countryInput) => {
       }
     });
     console.log(cardCount);
+    if (errorMessage) {
+      errorMessage.remove();
+      errorMessage = null;
+    }
 
     if (cardCount === 0) {
       noResults(countryInput);
@@ -31,8 +36,8 @@ const filter = (countryInput) => {
 };
 
 const noResults = (countryInput) => {
-  const errorMessage = document.createElement("div");
-  errorMessage.textContent = "There is no such that country";
+  errorMessage = document.createElement("div");
+  errorMessage.textContent = "There is no such country!";
   errorMessage.className = "text-red-700 font-bold";
   countryInput.insertAdjacentElement("afterend", errorMessage);
 };
