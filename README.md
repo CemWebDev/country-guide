@@ -8,3 +8,6 @@ This project is a Country Guide developed using Tailwind CSS and Vanilla JavaScr
 - View detailed information about each country
 - Search and filter functionality
 - Modern and responsive design
+
+
+## Screenshots
