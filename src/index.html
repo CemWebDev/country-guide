@@ -7,17 +7,9 @@
     <link rel="stylesheet" href="./css/output.css" />
   </head>
   <body class="m-0 p-0 bg-indigo-100 relative">
-    <header
-      class="w-full px-4 py-8 bg-indigo-900 shadow-xl z-50"
-      id="header"
-    >
-      <a href="./index.html" class="uppercase text-xl font-bold text-indigo-50"
-        >Country Guide</a
-      >
-    </header>
-    <section class="w-full px-4 py-8 sticky top-0" id="search">
-      <form class="w-full md:w-1/3" id="country-search-form">
-        <div class="w-full flex flex-col items-start gap-2">
+    <section class="w-full bg-indigo-900 shadow-2xl flex items-center px-4 py-8 sticky top-0" id="search">
+      <form class="w-full" id="country-search-form">
+        <div class="w-full md:w-1/3 flex flex-col items-start gap-2">
           <input
             type="text"
             name="country-input"
@@ -25,7 +17,7 @@
             autocomplete="off"
             spellcheck="false"
             placeholder="Enter a country name..."
-            class="uppercase font-bold w-full p-3 pr-10 mb-4 md:mb-0 bg-white text-black border border-indigo-100 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
+            class="lowercase font-bold w-full p-3 pr-10 mb-4 md:mb-0 bg-white text-black border border-indigo-100 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
           />
         </div>
       </form>
@@ -34,14 +26,7 @@
       class="mt-8 px-4 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16"
       id="cards"
     ></section>
-    <section class="px-4 py-8">
-      <button
-        id="show-more"
-        class="bg-indigo-900 text-white py-2 px-4 rounded transition ease-in-out delay-100 hover:bg-indigo-600"
-      >
-        Show More
-      </button>
-    </section>
+    <section class="px-4 py-8" id="error-message"></section>
     <script type="module" src="./javascript/index.js"></script>
   </body>
 </html>

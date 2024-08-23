@@ -1,21 +1,11 @@
-let cardsToShow = 40;
-let currentIndex = 0;
-
 export const createCountryCard = (countries) => {
   if (!Array.isArray(countries) || countries.length === 0) {
     return;
   }
 
   const cardsWrapper = document.getElementById("cards");
-  const showMoreBtn = document.getElementById("show-more");
-
-  const countriesToShow = countries.slice(
-    currentIndex,
-    currentIndex + cardsToShow
-  );
-  currentIndex += cardsToShow;
-
-  countriesToShow.forEach((country) => {
+  
+  countries.forEach((country) => {
     const card = document.createElement("div");
     card.className =
       "rounded-xl bg-gray-100 text-white cursor-pointer country-card shadow-2xl";
@@ -53,13 +43,5 @@ export const createCountryCard = (countries) => {
     card.appendChild(imageContainer);
     card.appendChild(countryContent);
     cardsWrapper.appendChild(card);
-  });
-
-  if (currentIndex >= countries.length) {
-    showMoreBtn.className = "hidden";
-  }
-
-  showMoreBtn.addEventListener("click", () => {
-    createCountryCard(countries);
   });
 };
