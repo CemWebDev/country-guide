@@ -25,12 +25,12 @@ const filter = (countryInput) => {
     console.log(cardCount);
 
     if (cardCount === 0) {
-      noResults();
+      noResults(countryInput);
     }
   });
 };
 
-const noResults = () => {
+const noResults = (countryInput) => {
   const errorMessage = document.createElement("div");
   errorMessage.textContent = "There is no such that country";
   errorMessage.className = "text-red-700 font-bold";
