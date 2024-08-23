@@ -18,3 +18,10 @@ This project is a Country Guide developed using Tailwind CSS and Vanilla JavaScr
 ### Mobile Preview
 
 <img src='./design/mobile-design.png' width='auto' height='400'/>
+
+
+## Technologies
+
+- [Tailwind CSS](https://tailwindcss.com/) - Modern CSS framework
+- [HTML]
+- [JavaScript]
