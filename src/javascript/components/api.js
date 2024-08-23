@@ -26,7 +26,7 @@ const createCountryCard = (countries) => {
   countries.forEach((country) => {
     const card = document.createElement("div");
     card.className =
-      "rounded-xl bg-gray-100 text-white cursor-pointer country-card text-black shadow-2xl";
+      "rounded-xl bg-gray-100 text-white cursor-pointer country-card shadow-2xl";
     const imageContainer = document.createElement("div");
     const countryFlag = document.createElement("img");
     countryFlag.src = country.flags.png;
@@ -35,7 +35,7 @@ const createCountryCard = (countries) => {
     imageContainer.appendChild(countryFlag);
 
     const countryContent = document.createElement("div");
-    countryContent.className = "mt-4 flex flex-col items-center gap-6 p-2";
+    countryContent.className = "mt-4 flex flex-col items-center gap-6 p-2 text-black";
     const countryName = document.createElement("h1");
     countryName.className = "text-2xl font-bold";
     countryName.textContent = country.name.common;

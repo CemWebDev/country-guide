@@ -1,11 +1,11 @@
-const countryInput = document.getElementById("country-input");
 let cardCount = 250;
 
 const Search = () => {
-  filter();
+  const countryInput = document.getElementById("country-input");
+  filter(countryInput);
 };
 
-const filter = () => {
+const filter = (countryInput) => {
   countryInput.addEventListener("input", () => {
     const searchValue = countryInput.value.toLowerCase();
     const countryCards = document.querySelectorAll(".country-card");
