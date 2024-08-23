@@ -22,6 +22,6 @@ This project is a Country Guide developed using Tailwind CSS and Vanilla JavaScr
 
 ## Technologies
 
-- [Tailwind CSS](https://tailwindcss.com/) - Modern CSS framework
-- [HTML]
-- [JavaScript]
+- [Tailwind CSS](https://tailwindcss.com/)
+- HTML
+- JavaScript
