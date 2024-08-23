@@ -26,7 +26,7 @@ const createCountryCard = (countries) => {
   countries.forEach((country) => {
     const card = document.createElement("div");
     card.className =
-      "rounded-xl bg-gray-800 text-white cursor-pointer country-card";
+      "rounded-xl bg-gray-100 text-white cursor-pointer country-card text-black";
     const imageContainer = document.createElement("div");
     const countryFlag = document.createElement("img");
     countryFlag.src = country.flags.png;
