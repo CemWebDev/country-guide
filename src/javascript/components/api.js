@@ -37,7 +37,7 @@ const createCountryCard = (countries) => {
     const countryContent = document.createElement("div");
     countryContent.className = "mt-4 flex flex-col items-center gap-6 p-2";
     const countryName = document.createElement("h1");
-    countryName.className = "text-2xl";
+    countryName.className = "text-2xl font-bold";
     countryName.textContent = country.name.common;
     const countryDetails = document.createElement("div");
     countryDetails.className = "flex flex-col items-center";
