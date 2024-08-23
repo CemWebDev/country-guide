@@ -2,7 +2,7 @@ import { createCountryCard } from "../utils/createCountryCard.js";
 import { handleFetchError } from "../utils/handleFetchError.js";
 
 const API = () => {
-  const API_URL = "https://restcountries.com/v3.1/all-";
+  const API_URL = "https://restcountries.com/v3.1/all";
 
   fetch(API_URL)
     .then((response) => {
