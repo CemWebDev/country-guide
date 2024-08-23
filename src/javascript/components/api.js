@@ -1,7 +1,7 @@
 import { createCountryCard } from "../utils/createCountryCard.js";
 import { handleFetchError } from "../utils/handleFetchError.js";
 
-export let allCountries = [];
+
 
 export const API = async () => {
   const API_URL = "https://restcountries.com/v3.1/all";
