@@ -35,15 +35,22 @@ const createCountryCard = (countries) => {
     imageContainer.appendChild(countryFlag);
 
     const countryContent = document.createElement("div");
-    countryContent.className = "mt-4 flex flex-col items-center gap-6 p-2 text-black";
+    countryContent.className =
+      "mt-4 flex flex-col items-center gap-6 p-2 text-black";
     const countryName = document.createElement("h1");
     countryName.className = "text-2xl font-bold";
     countryName.textContent = country.name.common;
     const countryDetails = document.createElement("div");
-    countryDetails.className = "flex flex-col items-center";
+    countryDetails.className = "flex flex-col items-center gap-2 text-lg";
+
+    const capital = country.capital ? country.capital : "No capital available!";
+    const population = country.population
+      ? country.population.toLocaleString()
+      : "Unknown population!";
+
     countryDetails.innerHTML = `
-  <span>Population: ${country.population}</span>
-  <p>Capital: ${country.capital}</p>
+  <span>Capital: ${capital}</span>
+  <p>Population: ${population}</p>
   `;
     countryContent.appendChild(countryName);
     countryContent.appendChild(countryDetails);
