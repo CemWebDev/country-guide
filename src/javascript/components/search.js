@@ -23,7 +23,7 @@ const filter = (countryInput) => {
         card.classList.add("hidden");
       }
     });
-    console.log(cardCount);
+
     if (errorMessage) {
       errorMessage.remove();
       errorMessage = null;
@@ -35,11 +35,12 @@ const filter = (countryInput) => {
   });
 };
 
-const noResults = (countryInput) => {
+const noResults = () => {
+  const errorMessageWrapper = document.getElementById("error-message");
   errorMessage = document.createElement("div");
   errorMessage.textContent = "There is no such country!";
-  errorMessage.className = "text-red-700 font-bold";
-  countryInput.insertAdjacentElement("afterend", errorMessage);
+  errorMessage.className = "text-red-800 text-2xl font-bold";
+  errorMessageWrapper.appendChild(errorMessage);
 };
 
 export default Search;
