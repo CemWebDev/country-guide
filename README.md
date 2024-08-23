@@ -9,5 +9,8 @@ This project is a Country Guide developed using Tailwind CSS and Vanilla JavaScr
 - Search and filter functionality
 - Modern and responsive design
 
-
 ## Screenshots
+
+### Tablet Preview
+
+<img src='./design/tablet-design.png' width='400' height='auto'/>
