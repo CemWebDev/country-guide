@@ -1,6 +1,10 @@
 let cardCount = 250;
 
 const Search = () => {
+  filter();
+};
+
+const filter = () => {
   const countryInput = document.getElementById("country-input");
 
   countryInput.addEventListener("input", () => {
