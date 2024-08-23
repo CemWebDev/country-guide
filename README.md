@@ -14,3 +14,7 @@ This project is a Country Guide developed using Tailwind CSS and Vanilla JavaScr
 ### Tablet Preview
 
 <img src='./design/tablet-design.png' width='400' height='auto'/>
+
+### Mobile Preview
+
+<img src='./design/tablet-mobile.png' width='400' height='auto'/>
