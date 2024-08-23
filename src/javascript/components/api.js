@@ -1,6 +1,8 @@
 import { createCountryCard } from "../utils/createCountryCard.js";
 import { handleFetchError } from "../utils/handleFetchError.js";
 
+let allCountries = [];
+
 const API = () => {
   const API_URL = "https://restcountries.com/v3.1/all";
 
@@ -12,6 +14,7 @@ const API = () => {
       return response.json();
     })
     .then((data) => {
+      allCountries = data;
       createCountryCard(data);
     })
     .catch((error) => {
