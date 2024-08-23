@@ -12,7 +12,6 @@ export const API = async () => {
       throw new Error(`HTTP error! Status ${response.status}`);
     }
     const data = await response.json();
-    allCountries = data;
     createCountryCard(data);
     return allCountries;
   } catch (error) {
