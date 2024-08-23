@@ -1,3 +1,6 @@
+let cardsToShow = 40;
+let currentIndex = 0;
+
 const API = () => {
   const API_URL = "https://restcountries.com/v3.1/all";
 
@@ -21,9 +24,16 @@ const createCountryCard = (countries) => {
     return;
   }
 
-  console.log(countries);
   const cardsWrapper = document.getElementById("cards");
-  countries.forEach((country) => {
+  const showMoreBtn = document.getElementById("show-more");
+
+  const countriesToShow = countries.slice(
+    currentIndex,
+    currentIndex + cardsToShow
+  );
+  currentIndex += cardsToShow;
+
+  countriesToShow.forEach((country) => {
     const card = document.createElement("div");
     card.className =
       "rounded-xl bg-gray-100 text-white cursor-pointer country-card shadow-2xl";
@@ -41,23 +51,34 @@ const createCountryCard = (countries) => {
     countryName.className = "text-2xl font-bold";
     countryName.textContent = country.name.common;
     const countryDetails = document.createElement("div");
-    countryDetails.className = "flex flex-col items-center gap-2 text-lg";
+    countryDetails.className = "country-details flex flex-col items-center";
 
-    const capital = country.capital ? country.capital : "No capital available!";
-    const population = country.population
+    const capitalText = country.capital
+      ? country.capital
+      : "No capital available";
+    const populationText = country.population
       ? country.population.toLocaleString()
-      : "Unknown population!";
+      : "Unknown population";
 
     countryDetails.innerHTML = `
-  <span>Capital: ${capital}</span>
-  <p>Population: ${population}</p>
-  `;
+      <span>Population: ${populationText}</span>
+      <p>Capital: ${capitalText}</p>
+    `;
+
     countryContent.appendChild(countryName);
     countryContent.appendChild(countryDetails);
 
     card.appendChild(imageContainer);
     card.appendChild(countryContent);
     cardsWrapper.appendChild(card);
+  });
+
+  if (currentIndex >= countries.length) {
+    showMoreBtn.className = "hidden";
+  }
+
+  showMoreBtn.addEventListener("click", () => {
+    createCountryCard(countries);
   });
 };
 
