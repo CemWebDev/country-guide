@@ -45,6 +45,8 @@ Make sure you have Node.js and npm (or yarn) installed on your computer.
    cd country-guide
 ```
 
+3. For Tailwind CSS setup and customization, refer to the [Tailwind CSS Documentation](https://tailwindcss.com/docs) for detailed information on configuration and usage.
+
 ## Usage
 
 1. The home page lists countries.
