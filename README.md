@@ -36,13 +36,13 @@ Make sure you have Node.js and npm (or yarn) installed on your computer.
 1. Clone this repository:
 
 ```bash
-   git clone https://github.com/username/country-guide.git
+   git clone https://github.com/CemWebDev/country-guide.git
 ```
 
 2. Navigate into the project directory:
 
 ```bash
-cd country-guide
+   cd country-guide
 ```
 
 ## Usage
