@@ -39,6 +39,12 @@ Make sure you have Node.js and npm (or yarn) installed on your computer.
    git clone https://github.com/username/country-guide.git
 ```
 
+2. Navigate into the project directory:
+
+```bash
+cd country-guide
+```
+
 ## Usage
 
 1. The home page lists countries.
