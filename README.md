@@ -21,7 +21,7 @@ This project is a Country Guide developed using Tailwind CSS and Vanilla JavaScr
 
 ## Technologies
 
-- [Tailwind CSS](https://tailwindcss.com/)
+- Tailwind CSS
 - HTML
 - Vanilla JavaScript
 
@@ -45,10 +45,21 @@ Make sure you have Node.js and npm (or yarn) installed on your computer.
    cd country-guide
 ```
 
-3. For Tailwind CSS setup and customization, refer to the [Tailwind CSS Documentation](https://tailwindcss.com/docs) for detailed information on configuration and usage.
+3. Install the necessary dependencies:
+
+```bash
+   npm install
+```
+
+4. For Tailwind CSS setup and customization, refer to the [Tailwind CSS Documentation](https://tailwindcss.com/docs) for detailed information on configuration and usage.
 
 ## Usage
 
 1. The home page lists countries.
 2. You can search for a country by typing its name into the search bar.
 3. Click on a country to view detailed inf
+
+
+## Contributing
+
+Fell free to contribute by creating issues or pull requests. Your contributions are welcome! 
